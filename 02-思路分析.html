@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .item {
+      padding: 5px;
+      border: 1px solid red;
+      position: absolute;
+    }
+
+    .item img {
+      display: block;
+      width: 192px;
+    }
+  </style>
+</head>
+<body>
+<div id="waterfall">
+  <!--(.item>img[src="images/p_0$$.jpg"])*21-->
+  <div class="item"><img src="images/p_000.jpg" alt=""></div>
+  <div class="item"><img src="images/p_001.jpg" alt=""></div>
+  <div class="item"><img src="images/p_002.jpg" alt=""></div>
+  <div class="item"><img src="images/p_003.jpg" alt=""></div>
+  <div class="item"><img src="images/p_004.jpg" alt=""></div>
+  <div class="item"><img src="images/p_005.jpg" alt=""></div>
+  <div class="item"><img src="images/p_006.jpg" alt=""></div>
+  <div class="item"><img src="images/p_007.jpg" alt=""></div>
+  <div class="item"><img src="images/p_008.jpg" alt=""></div>
+  <div class="item"><img src="images/p_009.jpg" alt=""></div>
+  <div class="item"><img src="images/p_010.jpg" alt=""></div>
+  <div class="item"><img src="images/p_011.jpg" alt=""></div>
+  <div class="item"><img src="images/p_012.jpg" alt=""></div>
+  <div class="item"><img src="images/p_013.jpg" alt=""></div>
+  <div class="item"><img src="images/p_014.jpg" alt=""></div>
+  <div class="item"><img src="images/p_015.jpg" alt=""></div>
+  <div class="item"><img src="images/p_016.jpg" alt=""></div>
+  <div class="item"><img src="images/p_017.jpg" alt=""></div>
+  <div class="item"><img src="images/p_018.jpg" alt=""></div>
+  <div class="item"><img src="images/p_019.jpg" alt=""></div>
+  <div class="item"><img src="images/p_020.jpg" alt=""></div>
+
+</div>
+
+
+<script>
+
+
+  //1. 确定一行里面能够放几列   可视区的宽度/每一列的宽度 = 5  floor
+
+
+  //2. 摆好第一行   top：0   left: i * 每一列的宽度
+        //使用一个数组，存储每一列的高度  [100,250,150,200,300]
+
+  //3. 对于后面的哪些个div， 找到数组的最小值，把这个div摆到最小列。 最小列需要加上新增加的这个div的高度。
+
+
+  //4. 给window注册onresize事件， 可视区发生改变时，需要重新排列
+
+
+  //5. 给window注册onscroll事件， 判断如果到底了，需要动态的添加div，继续排列
+
+</script>
+</body>
+</html>
